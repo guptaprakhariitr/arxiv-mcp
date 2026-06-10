@@ -1,0 +1,27 @@
+name = "arxiv-mcp"
+main = "src/index.ts"
+compatibility_date = "2026-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[observability]
+enabled = true
+
+[[kv_namespaces]]
+binding = "CACHE"
+id = "949de367471e4050854776fbf8755b80"
+
+[[kv_namespaces]]
+binding = "USAGE"
+id = "7710d6340599486fa959a53229b41406"
+
+[vars]
+UPGRADE_URL = "https://arxiv-mcp.prakhar-cognizance.workers.dev/upgrade"
+ARXIV_BASE = "http://export.arxiv.org/api/query"
+USER_AGENT = "arxiv-mcp/0.1 (prakshatechnologies@gmail.com)"
+PRODUCT_NAME = "arxiv-mcp"
+DODO_PRODUCT_ID_SOLO = "pdt_0NgkZfufKwT5U06T1JmI1"
+DODO_PRODUCT_ID_TEAM = "pdt_0NgkZfxp1WuBQzpSuQPO3"
+DODO_PRODUCT_ID_PRO  = "pdt_0NgkZg2CE98XF3gPIXrKk"
+FROM_EMAIL = "prakshatechnologies@gmail.com"
+DODO_BASE = "https://live.dodopayments.com"
+CUSTOMER_PORTAL_RETURN_URL = "https://arxiv-mcp.prakhar-cognizance.workers.dev/account"
