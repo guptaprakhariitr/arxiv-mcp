@@ -5,11 +5,11 @@
   "description": "Search arXiv preprints, daily category digest, and a premium author-collaborator graph tool — the differentiator vs other arXiv MCPs.",
   "version": "0.1.0",
   "license": "MIT",
-  "homepage": "https://arxiv-mcp.prakhar-cognizance.workers.dev",
+  "homepage": "https://arxiv-mcp.atlasword.workers.dev",
   "repository": "https://github.com/guptaprakhariitr/arxiv-mcp",
   "categories": ["research", "academic"],
   "tags": ["arxiv", "preprint", "research", "academic", "author-graph", "biotech", "cs.AI"],
-  "transport": { "type": "http", "url": "https://arxiv-mcp.prakhar-cognizance.workers.dev/mcp" },
+  "transport": { "type": "http", "url": "https://arxiv-mcp.atlasword.workers.dev/mcp" },
   "auth": { "type": "bearer", "freeTier": { "monthlyCalls": 100, "ratePerMinute": 10 } },
   "tools": ["arxiv_search", "arxiv_get_paper", "arxiv_daily_digest", "arxiv_author_graph"],
   "pricing": { "currency": "USD", "tiers": [

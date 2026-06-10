@@ -1,0 +1,44 @@
+# ArXiv MCP
+
+> ArXiv preprint search, paper metadata, daily category digest, author collaboration graph
+
+This MCP server exposes 4 tools via the Model Context Protocol (JSON-RPC 2.0 over HTTP POST). It runs on Cloudflare Workers and is billed via Dodo Payments. Authenticated via `Authorization: Bearer <api_key>` obtained by subscribing at `https://arxiv-mcp.atlasword.workers.dev/upgrade`.
+
+## Endpoint
+- MCP JSON-RPC: https://arxiv-mcp.atlasword.workers.dev/mcp
+- Health: https://arxiv-mcp.atlasword.workers.dev/health
+- Landing page: https://arxiv-mcp.atlasword.workers.dev/
+- Get API key: https://arxiv-mcp.atlasword.workers.dev/upgrade?tier=solo
+
+## Tools
+- `arxiv_search`: Search arXiv by free-text, author, and/or category. Up to 100 results.
+- `arxiv_get_paper`: Paper metadata + abstract by id (e.g. '2024.04567' or 'arXiv:2024.04567v2').
+- `arxiv_daily_digest`: Recently-submitted papers in a category — daily catch-up.
+- `arxiv_author_graph`: Build a collaborator graph rooted at an author (depth 1 = direct co-authors).
+
+## Authentication
+Pass `Authorization: Bearer <api_key>` on POST /mcp. Free tier: anonymous, 100 calls / month / IP.
+
+## Pricing
+- Free: 100 calls / month (anonymous, no signup)
+- Solo $9/mo: 2,000 calls / month, 60/min
+- Team $29/mo: 10,000 calls / month, 200/min, 5 team seats
+- Pro $79/mo: 50,000 calls / month, 600/min, 25 team seats
+Billed via Dodo Payments (merchant-of-record). Cancel anytime.
+
+## Account management
+- View account: GET https://arxiv-mcp.atlasword.workers.dev/account (Bearer)
+- Rotate key: POST https://arxiv-mcp.atlasword.workers.dev/account/rotate (Bearer)
+- GDPR data export: GET https://arxiv-mcp.atlasword.workers.dev/account/export (Bearer)
+- Team management (Team+): https://arxiv-mcp.atlasword.workers.dev/account/team
+
+## Docs
+- README: https://github.com/guptaprakhariitr/arxiv-mcp
+- Live status: https://mcp-hub.atlasword.workers.dev/status
+- Privacy: https://mcp-hub.atlasword.workers.dev/privacy
+- Terms: https://mcp-hub.atlasword.workers.dev/terms
+
+## Contact
+- Author: Prakhar Gupta
+- Email: prakshatechnologies@gmail.com
+- GitHub: https://github.com/guptaprakhariitr

@@ -72,7 +72,7 @@ const LLMS_TXT = `# arxiv-mcp
 - arxiv_daily_digest(category)
 - arxiv_author_graph(author, depth)  [premium]
 
-Endpoint: https://arxiv-mcp.prakhar-cognizance.workers.dev/mcp
+Endpoint: https://arxiv-mcp.atlasword.workers.dev/mcp
 `;
 function renderLanding(env: Env, url: URL): string {
   const productName = env.PRODUCT_NAME ?? "arxiv-mcp";
@@ -87,6 +87,6 @@ function renderLanding(env: Env, url: URL): string {
 <style>body{font:16px/1.5 system-ui,sans-serif;max-width:720px;margin:4rem auto;padding:0 1rem}code{background:#f3f3f3;padding:.1em .35em;border-radius:3px}</style>${meta}
 </head>
 <body><h1>arxiv-mcp</h1><p>Search arXiv preprints; daily category digest; author-graph (premium).</p>
-<p><code>POST https://arxiv-mcp.prakhar-cognizance.workers.dev/mcp</code></p>
+<p><code>POST https://arxiv-mcp.atlasword.workers.dev/mcp</code></p>
 </body></html>`;
 }
