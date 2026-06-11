@@ -3,7 +3,7 @@
   "name": "io.github.guptaprakhariitr/arxiv-mcp",
   "title": "ArXiv",
   "description": "ArXiv preprint search, daily category digest, and author-collaborator graph.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "websiteUrl": "https://arxiv-mcp.atlasword.workers.dev/",
   "repository": {
     "url": "https://github.com/guptaprakhariitr/arxiv-mcp",
@@ -13,16 +13,6 @@
     {
       "type": "streamable-http",
       "url": "https://arxiv-mcp.atlasword.workers.dev/mcp"
-    }
-  ],
-  "packages": [
-    {
-      "registryType": "npm",
-      "identifier": "@insnapsprakhar/arxiv-mcp",
-      "version": "0.1.0",
-      "transport": {
-        "type": "stdio"
-      }
     }
   ]
 }
