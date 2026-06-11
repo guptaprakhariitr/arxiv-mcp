@@ -200,3 +200,27 @@ MIT — see [LICENSE](LICENSE).
 - **Live status page:** [https://mcp-hub.atlasword.workers.dev/status](https://mcp-hub.atlasword.workers.dev/status)
 - **Machine-readable status:** [https://mcp-hub.atlasword.workers.dev/status.json](https://mcp-hub.atlasword.workers.dev/status.json)
 - **Source repo:** [https://github.com/guptaprakhariitr/arxiv-mcp](https://github.com/guptaprakhariitr/arxiv-mcp)
+
+
+## Install via npm (one-liner)
+
+A thin launcher is published as [`@atlasword/arxiv-mcp`](https://www.npmjs.com/package/@atlasword/arxiv-mcp) on npm. No manual URL to copy/paste:
+
+```bash
+npx -y @atlasword/arxiv-mcp
+```
+
+Or wire it into your MCP client:
+
+```jsonc
+{
+  "mcpServers": {
+    "arxiv": {
+      "command": "npx",
+      "args": ["-y", "@atlasword/arxiv-mcp"]
+    }
+  }
+}
+```
+
+The npm package is just a launcher — it shells out to [`mcp-remote`](https://www.npmjs.com/package/mcp-remote) and points it at the hosted endpoint (`https://arxiv-mcp.atlasword.workers.dev/mcp`).

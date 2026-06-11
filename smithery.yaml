@@ -1,0 +1,66 @@
+# Smithery registry config — https://smithery.ai/docs/build/project-config/smithery-yaml
+# This is an HTTP-transport MCP server; Smithery hosts the listing and proxies
+# clients straight to our Cloudflare Workers endpoint.
+
+name: arxiv-mcp
+displayName: ArXiv (with author-graph)
+description: |
+  Search arXiv preprints, daily category digest, and a premium author-collaborator graph tool — the differentiator vs other arXiv MCPs.
+homepage: https://arxiv-mcp.atlasword.workers.dev
+repository: https://github.com/guptaprakhariitr/arxiv-mcp
+license: MIT
+version: "0.1.0"
+
+runtime: container
+
+startCommand:
+  type: http
+  url: https://arxiv-mcp.atlasword.workers.dev/mcp
+  configSchema:
+    type: object
+    properties:
+      apiKey:
+        type: string
+        title: API key (optional)
+        description: |
+          Bearer token from https://arxiv-mcp.atlasword.workers.dev/upgrade.
+          Leave blank for the anonymous free tier (~100 calls/month/IP).
+    required: []
+  exampleConfig:
+    apiKey: ""
+  commandFunction: |-
+    (config) => ({
+      type: "http",
+      url: "https://arxiv-mcp.atlasword.workers.dev/mcp",
+      headers: config.apiKey ? { Authorization: `Bearer ${config.apiKey}` } : {}
+    })
+
+remote:
+  type: http
+  url: https://arxiv-mcp.atlasword.workers.dev/mcp
+
+categories:
+  - research
+  - academic
+tags:
+  - arxiv
+  - preprint
+  - research
+  - academic
+  - author-graph
+  - biotech
+  - cs.AI
+
+tools:
+  - name: arxiv_search
+  - name: arxiv_get_paper
+  - name: arxiv_daily_digest
+  - name: arxiv_author_graph
+
+auth:
+  type: bearer
+  required: false
+  description: |
+    Optional. Anonymous free tier works for ~100 calls/month per IP. For higher
+    quotas, grab a key from https://arxiv-mcp.atlasword.workers.dev/upgrade and pass
+    it as `Authorization: Bearer <key>`.
