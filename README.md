@@ -204,10 +204,10 @@ MIT — see [LICENSE](LICENSE).
 
 ## Install via npm (one-liner)
 
-A thin launcher is published as [`@atlasword/arxiv-mcp`](https://www.npmjs.com/package/@atlasword/arxiv-mcp) on npm. No manual URL to copy/paste:
+A thin launcher is published as [`@insnapsprakhar/arxiv-mcp`](https://www.npmjs.com/package/@insnapsprakhar/arxiv-mcp) on npm. No manual URL to copy/paste:
 
 ```bash
-npx -y @atlasword/arxiv-mcp
+npx -y @insnapsprakhar/arxiv-mcp
 ```
 
 Or wire it into your MCP client:
@@ -217,7 +217,7 @@ Or wire it into your MCP client:
   "mcpServers": {
     "arxiv": {
       "command": "npx",
-      "args": ["-y", "@atlasword/arxiv-mcp"]
+      "args": ["-y", "@insnapsprakhar/arxiv-mcp"]
     }
   }
 }
