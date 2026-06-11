@@ -14,7 +14,7 @@ export interface Env {
   USER_AGENT: string;
   DODO_API_KEY: string; DODO_WEBHOOK_SECRET: string; DODO_BASE?: string;
   DODO_PRODUCT_ID_SOLO: string; DODO_PRODUCT_ID_TEAM: string; DODO_PRODUCT_ID_PRO: string;
-  CUSTOMER_PORTAL_RETURN_URL?: string; RESEND_API_KEY?: string; FROM_EMAIL?: string; PRODUCT_NAME?: string; PRODUCT_TAGLINE?: string; PRODUCT_URL?: string;
+  CUSTOMER_PORTAL_RETURN_URL?: string; RESEND_API_KEY?: string; FROM_EMAIL?: string; BREVO_API_KEY?: string; SUPPORT_FORWARD_EMAIL?: string; PRODUCT_NAME?: string; PRODUCT_TAGLINE?: string; PRODUCT_URL?: string;
   ADMIN_TOKEN?: string;
 }
 
