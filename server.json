@@ -1,0 +1,28 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.guptaprakhariitr/arxiv-mcp",
+  "title": "ArXiv",
+  "description": "ArXiv preprint search, daily category digest, and author-collaborator graph.",
+  "version": "0.1.0",
+  "websiteUrl": "https://arxiv-mcp.atlasword.workers.dev/",
+  "repository": {
+    "url": "https://github.com/guptaprakhariitr/arxiv-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://arxiv-mcp.atlasword.workers.dev/mcp"
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@insnapsprakhar/arxiv-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
